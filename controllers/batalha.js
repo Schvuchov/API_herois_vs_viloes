@@ -38,8 +38,8 @@ const postHeroiVilao = (req, res) => {
     const vilao = viloes.find( vilao => vilao.id === idVilao)
 
     if(!idHeroi || !idVilao) {
-        res.status(404).send({ error: 'Heroi ou vilão não encontrado' });
-        return;
+        res.status(404).send({ error: 'Heroi ou vilão não encontrado' })
+        return
     }
 
     if(heroi.pontosDePoder > vilao.pontosDePoder){
