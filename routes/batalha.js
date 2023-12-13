@@ -1,5 +1,5 @@
 import express from 'express'
-import { postHeroi, postVilao, postHeroiVilao } from '../controllers/batalha'
+import { postHeroi, postVilao, postHeroiVilao } from '../controllers/batalha.js'
 
 const router = express.Router()
 

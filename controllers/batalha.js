@@ -38,18 +38,22 @@ const postHeroiVilao = (req, res) => {
     const vilao = viloes.find( vilao => vilao.id === idVilao)
 
     if(!idHeroi || !idVilao) {
-        res.status(404).send({ error: 'Heroi ou vilão não encontrados' });
+        res.status(404).send({ error: 'Heroi ou vilão não encontrado' });
         return;
     }
 
     if(heroi.pontosDePoder > vilao.pontosDePoder){
-        res.status(201).send({ mensagem: `O Heroi ${heroi.nome} ganhou!` })
+        res.status(201).send({ mensagem: `${heroi.nome} venceu ${vilao.nome}!` })
 
     } else if(heroi.pontosDePoder < vilao.pontosDePoder){
-        res.status(201).send({ mensagem: `O Vilão ${vilao.nome} ganhou!` })
+        res.status(201).send({ mensagem: `${vilao.nome} venceu ${heroi.nome}!` })
 
-    } else if(heroi.pontosDePoder === vilao.pontosDePoder){
-        res.status(201).send({ mensagem: `Houve um empate! E agora quem podera ajudar?` })
+    } else if(heroi.pontosDePoder == vilao.pontosDePoder){
+        res.status(201).send({ mensagem: `Houve um empate! E agora quem podera nos ajudar?` })
+        
+    } else {
+        res.status(400).send({ mensagem: "OOOPS Algo deu errado" })
+        return
     }
 
 }
