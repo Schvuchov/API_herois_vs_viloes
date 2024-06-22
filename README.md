@@ -7,6 +7,6 @@ Um endpoint batalhar que recebe o id do herói e o id do vilão e retorna a bata
 Exemplo: { batalha: "Thanos venceu Spider-man!”}
 
 API dividida em arquivos de routes, controllers, server e contem os endpoints a seguir:
- -- /heroi (POST) – Cadastrar um herói
- -- /vilao (POST) – Cadastrar um vilão
- -- /batalha (POST) – Receber id_heroi e id_vilao e retornar o vencedor
+  -  /heroi (POST) – Cadastrar um herói
+  -  /vilao (POST) – Cadastrar um vilão
+  -  /batalha (POST) – Receber id_heroi e id_vilao e retornar o vencedor
